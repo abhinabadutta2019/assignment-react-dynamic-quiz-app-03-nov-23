@@ -3,6 +3,7 @@ import { QuestionDetail } from "./QuestionDetail";
 
 function App() {
   const objectList = data.questions;
+
   return (
     <div className="App">
       <QuestionDetail objectList={objectList} />
