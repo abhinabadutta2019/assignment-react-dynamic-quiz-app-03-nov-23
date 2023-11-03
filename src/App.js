@@ -7,7 +7,7 @@ function App() {
   const [position, setPosition] = useState(0);
   const oneObj = objectList[position];
 
-  console.log(position);
+  // console.log(position);
   //
   const nextButton = () => {
     setPosition(position + 1);

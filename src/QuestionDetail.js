@@ -4,7 +4,15 @@ import { ScoreContext } from "./ScoreContext";
 const QuestionDetail = ({ oneObj }) => {
   //
   const { score, increaseScore } = useContext(ScoreContext);
+  //
+  console.log(score, "score");
   //   console.log(oneObj);
+  const handleAnswerSelection = (index) => {
+    // console.log("Selected answer:", oneObj.options[index]);
+    if (oneObj.options[index] === oneObj.answer) {
+      increaseScore();
+    }
+  };
 
   //   console.log(score, "score");
   return (
@@ -14,7 +22,11 @@ const QuestionDetail = ({ oneObj }) => {
 
         {oneObj.options.map((oneAns, index) => (
           <p key={index}>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onClick={() => handleAnswerSelection(index)}
+            />
+
             {oneAns}
           </p>
         ))}
