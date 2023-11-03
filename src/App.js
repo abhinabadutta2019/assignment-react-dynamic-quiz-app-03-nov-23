@@ -13,17 +13,14 @@ function App() {
     setPosition(position + 1);
   };
   //
-  const previousButton = () => {
-    setPosition(position - 1);
-  };
+  // const previousButton = () => {
+  //   setPosition(position - 1);
+  // };
 
   return (
     <div className="App">
       <QuestionDetail oneObj={oneObj} />
 
-      <button disabled={position <= 0} onClick={previousButton}>
-        previous
-      </button>
       <button disabled={position >= objectList.length - 1} onClick={nextButton}>
         next
       </button>
