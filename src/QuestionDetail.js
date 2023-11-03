@@ -1,20 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ScoreContext } from "./ScoreContext";
 
 const QuestionDetail = ({ oneObj }) => {
-  //
   const { score, increaseScore } = useContext(ScoreContext);
+  const [disabled, setDisabled] = useState(false);
+
   //
-  console.log(score, "score");
-  //   console.log(oneObj);
+  console.log(score);
+  console.log(disabled);
+  //
+
   const handleAnswerSelection = (index) => {
-    // console.log("Selected answer:", oneObj.options[index]);
     if (oneObj.options[index] === oneObj.answer) {
       increaseScore();
     }
+    setDisabled(true);
   };
 
-  //   console.log(score, "score");
   return (
     <>
       <li key={oneObj._id}>
@@ -24,9 +26,9 @@ const QuestionDetail = ({ oneObj }) => {
           <p key={index}>
             <input
               type="checkbox"
-              onClick={() => handleAnswerSelection(index)}
+              disabled={disabled}
+              onChange={() => handleAnswerSelection(index)}
             />
-
             {oneAns}
           </p>
         ))}
