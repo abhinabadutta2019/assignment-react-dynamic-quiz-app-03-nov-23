@@ -2,8 +2,9 @@ import { useContext, useState } from "react";
 import { ScoreContext } from "./ScoreContext";
 
 const QuestionDetail = ({ oneObj }) => {
-  const { score, increaseScore } = useContext(ScoreContext);
-  const [disabled, setDisabled] = useState(false);
+  const { score, increaseScore, disabled, trueDisable } =
+    useContext(ScoreContext);
+  //   const [disabled, setDisabled] = useState(false);
 
   //
   console.log(score);
@@ -14,7 +15,7 @@ const QuestionDetail = ({ oneObj }) => {
     if (oneObj.options[index] === oneObj.answer) {
       increaseScore();
     }
-    setDisabled(true);
+    trueDisable();
   };
 
   return (
