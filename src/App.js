@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 import data from "./Data.json";
 import { QuestionDetail } from "./QuestionDetail";
 import { ScoreContext } from "./ScoreContext";
+//
+import "bootstrap/dist/css/bootstrap.css"; // Import Bootstrap CSS
 
 function App() {
   //
@@ -39,20 +41,29 @@ function App() {
   // };
 
   return (
-    <div className="App">
-      <h1>Brisk Quiz App</h1>
+    <div className="container mt-5">
+      {" "}
+      {/* Use Bootstrap container class */}
+      <h1 className="display-4">Brisk Quiz App</h1> <br />
+      <br />
+      {/* Use Bootstrap typography classes */}
       {showRes ? (
         <div>
           <h2>Your Score</h2>
-          <h4>{score}</h4>
+          <h4>
+            {score} out of {objectList.length}
+          </h4>
 
-          <button onClick={tryAgainHandler}>Try Again</button>
+          <button className="btn btn-success" onClick={tryAgainHandler}>
+            Try Again
+          </button>
         </div>
       ) : (
         <>
           <div>
             <QuestionDetail oneObj={oneObj} />
             <button
+              className="btn btn-outline-primary"
               disabled={position >= objectList.length - 1}
               onClick={nextButton}
             >
@@ -62,7 +73,9 @@ function App() {
             {position === objectList.length - 1 && (
               <div>
                 <p>Get Your score:</p>
-                <button onClick={showResHandler}>Show Result</button>
+                <button className="btn btn-success" onClick={showResHandler}>
+                  Show Result
+                </button>
               </div>
             )}
 

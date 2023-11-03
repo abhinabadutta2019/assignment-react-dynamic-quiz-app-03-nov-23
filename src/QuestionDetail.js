@@ -20,7 +20,7 @@ const QuestionDetail = ({ oneObj }) => {
 
   return (
     <>
-      <li key={oneObj._id}>
+      <div key={oneObj._id}>
         <p>{oneObj.question}</p>
 
         {oneObj.options.map((oneAns, index) => (
@@ -33,7 +33,7 @@ const QuestionDetail = ({ oneObj }) => {
             {oneAns}
           </p>
         ))}
-      </li>
+      </div>
     </>
   );
 };
