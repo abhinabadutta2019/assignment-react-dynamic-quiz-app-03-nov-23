@@ -66,10 +66,13 @@ function App() {
               </div>
             )}
 
-            <p>
-              You are at question number {position + 1} on total
-              {objectList.length} questions :
-            </p>
+            <div>
+              <span>Progress : </span>
+              <span>
+                You are at question number {position + 1} on total{" "}
+                {objectList.length} questions.
+              </span>
+            </div>
           </div>
         </>
       )}
