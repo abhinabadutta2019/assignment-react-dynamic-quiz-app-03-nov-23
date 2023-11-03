@@ -11,6 +11,10 @@ const ScoreContextProvider = ({ children }) => {
     setScore(score + 1);
   };
   //
+  const scoreStartAgain = () => {
+    setScore(0);
+  };
+  //
   const trueDisable = () => {
     setDisabled(true);
   };
@@ -21,7 +25,14 @@ const ScoreContextProvider = ({ children }) => {
   //
   return (
     <ScoreContext.Provider
-      value={{ score, increaseScore, disabled, trueDisable, falseDisable }}
+      value={{
+        score,
+        increaseScore,
+        scoreStartAgain,
+        disabled,
+        trueDisable,
+        falseDisable,
+      }}
     >
       {children}
     </ScoreContext.Provider>
