@@ -8,9 +8,11 @@ function App() {
   const oneObj = objectList[position];
 
   console.log(position);
+  //
   const nextButton = () => {
     setPosition(position + 1);
   };
+  //
   const previousButton = () => {
     setPosition(position - 1);
   };
