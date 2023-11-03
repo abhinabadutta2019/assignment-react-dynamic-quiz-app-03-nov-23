@@ -34,6 +34,8 @@ function App() {
     setPosition(0);
     scoreStartAgain();
     setShowRes(false);
+    //
+    falseDisable();
   };
   //
   // const previousButton = () => {
