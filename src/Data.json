@@ -1,0 +1,33 @@
+{
+  "questions": [
+    {
+      "_id": 0,
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Mars", "Jupiter", "Venus", "Earth"],
+      "answer": "Jupiter"
+    },
+    {
+      "_id": 1,
+      "question": "Which gas do plants absorb from the atmosphere?",
+      "options": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Hydrogen"],
+      "answer": "Carbon Dioxide"
+    },
+    {
+      "_id": 2,
+      "question": "What is the capital of Japan?",
+      "options": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
+      "answer": "Tokyo"
+    },
+    {
+      "_id": 3,
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "options": [
+        "William Shakespeare",
+        "Charles Dickens",
+        "Jane Austen",
+        "F. Scott Fitzgerald"
+      ],
+      "answer": "William Shakespeare"
+    }
+  ]
+}
